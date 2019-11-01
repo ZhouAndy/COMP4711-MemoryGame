@@ -111,7 +111,7 @@ function updateAfterFlip() {
             nextStage();
             let rotate = document.getElementById('gameboard');
             rotate.classList.remove('rotated');
-        }, 3000);
+        }, 5000);
     }
     document.getElementById('score').innerText = 'Score: ' + score;
 }   
