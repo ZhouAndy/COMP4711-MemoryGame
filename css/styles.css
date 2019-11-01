@@ -1,0 +1,83 @@
+html, body {
+    height: 100%;
+	background-color: #FFFFFF;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+h1 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+img {
+  border-radius: 50%;
+  max-width: 100%;
+  height: auto;
+}
+
+span.marker {
+	background-color: #00ff00;
+}
+
+.tile {
+  width: 70px;
+  height: 70px;
+  padding: 4px;
+  -o-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  border: 4px solid #fff;
+  background-color:rgb(41, 39, 39);
+}
+
+
+.tile.flip {
+  transform: rotateY(180deg);
+  background-color: rgb(49, 89, 218);
+}
+
+.rotated {
+  animation: spin 1.5s linear;
+  transform: rotate(90deg); 
+}
+
+.trueRevealed {
+  background-color: rgb(49, 89, 218);
+  transform: rotateY(180deg);
+  transition: transform 1s, background-color 2s;
+}
+
+.falseRevealed {
+  background-color: rgb(173, 11, 60);
+  transform: rotateY(180deg);
+  transition: transform 1s, background-color 2s;
+}
+
+.hidden {
+  background-color:rgb(41, 39, 39);
+  transform: rotateY(0deg);
+  transition: transform 1s, background-color 0.75s;
+}
+
+@-webkit-keyframes spin { 0% { -webkit-transform: rotate(0deg); } 50% { -webkit-transform: rotate(90deg); } }
